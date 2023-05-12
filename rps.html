@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rps.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="top">
+        <p class="title">Rock Paper Scissors</p>
+        <div>
+          <button onclick="
+            playGame('rock'); 
+          " class="move-button"><img src="RPS icons/rock.png" class="move-icon"></button>
+    
+          <button onclick="
+            playGame('paper');
+          " class="move-button"><img src="RPS icons/paper.png" class="move-icon"></button>
+      
+          <button onclick="
+            playGame('scissors');
+          " class="move-button"><img src="RPS icons/scissors.png" class="move-icon"></button>
+        </div>
+
+      </div>
+  
+      <div class="middle">
+        <p class="js-result result"></p>
+        <p class="js-moves"></p>
+        <p class="js-score score"></p>
+      </div>
+  
+      <div class="middle2">
+        <button onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+      " class="reset-score-button">Reset Score</button>
+  
+        <button class="auto-play-button" onclick="
+          autoPlay();
+        ">Auto Play</button>
+      </div>
+
+      <div class="bottom">
+        <div class="author"> Made by Jawad </div>
+        <a class="git" href="https://github.com/Jawad280"> Github : Jawad280 </a>
+      </div>
+    </div>
+
+    <script src="rps.js"></script>
+  </body>
+</html>
